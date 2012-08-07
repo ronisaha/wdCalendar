@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head  profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>jquery calendar grid date-picker tab and more plugin
+    </title>
+    <link rel="shortcut icon"  href="http://www.web-delicious.com/wp-content/themes/iblog2/favicon.ico"  type="image/x-icon">
+    <meta name="generator" content="WordPress 2.9.2"> 
+    <!-- leave this for stats -->
+    <link rel="stylesheet" href="css/style.css" type="text/css"  media="all">
+    <link rel="stylesheet" href="css/print.css" type="text/css"  media="print">
+    <!-- Sidebar docking boxes (dbx) by Brothercake - http://www.brothercake.com/ -->
+    <script type="text/javascript" src="css/dbx.js"></script>
+    <script type="text/javascript" src="css/dbx-key.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/dbx.css"  media="screen, projection">
+    <link rel="alternate" type="application/rss+xml" title="jquery plugins  RSS Feed" href="http://www.web-delicious.com/feed/">
+    <link rel="pingback" href="http://www.web-delicious.com/xmlrpc.php">
+    <!--[if lt IE 8]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if IE 6]>
+    <script src="http://www.web-delicious.com/wp-content/themes/iblog2/belatedpng.js"></script>
+    <script>
+      DD_belatedPNG.fix('.png_bg, img, #sidebar ul li, .plimage, .headerimage, .homeimage');
+     </script>
+    <style>
+    	#header .blogtitle .sheen{display: none; height: 1px;}
+    </style>
+    <![endif]-->
+    <link rel="EditURI" type="application/rsd+xml" title="RSD"  href="http://www.web-delicious.com/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"  href="http://www.web-delicious.com/wp-includes/wlwmanifest.xml"> 
+    <link rel="index" title="jquery plugins"  href="http://www.web-delicious.com/">
+    
+    <!--code highlighter file import-->
+    <script src="../../highlighter/scripts/shCore.js" type="text/javascript"></script>
+    <script src="../../highlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
+    <script src="../../highlighter/scripts/shBrushCss.js" type="text/javascript"></script>  
+    <link href="../../highlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="../../highlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" /> 
+    <script type="text/javascript">
+        SyntaxHighlighter.config.clipboardSwf = '../../highlighter/scripts/clipboard.swf';
+    	  SyntaxHighlighter.all();
+	  </script>
+    <!--end code highlighter-->
+    
+    
+    <link rel="stylesheet" href="css/shared.css" type="text/css">
+  </head>
+  <body>
+    <div id="page" class="fix">	
+      <div id="wrapper" class="fix">	   
+        <div id="header" class="fix">							
+          <a href="http://www.web-delicious.com/">
+            <img class="headerimage"  src="css/iblog2.png" alt="jquery plugins"></a>				   
+        </div>
+        <!-- /header -->	
+        <div id="nav" class="fix">		
+          <ul class="fix">			
+            	
+<li class="page_item "><a class="home" href="http://www.web-delicious.com/" title="Home"><img width="18" height="18" class="homeimage" src="http://www.web-delicious.com/wp-content/themes/iblog2/images/home-icon-trans.png" alt="" /></a></li>
+<li class="page_item page-item-15"><a href="http://www.web-delicious.com/jquery-plugins/" title="JQuery Plugins">JQuery Plugins</a></li>
+<li class="page_item page-item-12"><a href="http://www.web-delicious.com/outsourcing/" title="Outsourcing">Outsourcing</a></li>
+<li class="page_item page-item-48"><a href="http://www.web-delicious.com/portfolio/" title="Portfolio">Portfolio</a></li>
+<li class="page_item page-item-69"><a href="http://www.web-delicious.com/about-us/" title="About us">About us</a></li>	
+          </ul>		 		 	
+        </div>
+       <!-- /nav -->
+       <div id="container" class="fix">    
+          <div id="left-col">      
+            <div id="content">
+<div class="content">
+  <a name="config"></a><h2>Config</h2>
+<table class="items-list"><tr><td><a href="index.htm#config_autoload">autoload</a></td><td><a href="index.htm#config_enabledrag">enableDrag</a></td><td><a href="index.htm#config_eventitems">eventItems</a></td><td><a href="index.htm#config_extparam">extParam</a></td><tr><td><a href="index.htm#config_height">height</a></td><td><a href="index.htm#config_quickaddurl">quickAddUrl</a></td><td><a href="index.htm#config_quickdeleteurl">quickDeleteUrl</a></td><td><a href="index.htm#config_quickdeleteurl">quickDeleteUrl</a></td><tr><td><a href="index.htm#config_quickupdateurl">quickUpdateUrl</a></td><td><a href="index.htm#config_showday">showday</a></td><td><a href="index.htm#config_url">url</a></td><td><a href="index.htm#config_view">view</a></td><tr><td><a href="index.htm#config_weekstartday">weekstartday</a></td></table>  <div class="list">
+    <a name="config_autoload"></a> 
+    <h3>autoload</h3>
+    <p class="padded"><span class="datatype">Boolean</span> &nbsp; If event items is empty, and this param is set to true. Event will be retrieved by ajax call right after calendar is initialized.</p>
+    <a name="config_enabledrag"></a> 
+    <h3>enableDrag</h3>
+    <p class="padded"><span class="datatype">Boolean</span> &nbsp; Whether end user can drag event item by mouse.</p>
+    <a name="config_eventitems"></a> 
+    <h3>eventItems</h3>
+    <p class="padded"><span class="datatype">Array</span> &nbsp; event items for initialization.</p>
+    <a name="config_extparam"></a> 
+    <h3>extParam</h3>
+    <p class="padded"><span class="datatype">Array</span> &nbsp; Extra params submitted to server. Sample - [{name:"param1", value:"value1"}, {name:"param2", value:"value2"}]</p>
+    <a name="config_height"></a> 
+    <h3>height</h3>
+    <p class="padded"><span class="datatype">Number</span> &nbsp; Calendar height, false for page height.</p>
+    <a name="config_quickaddurl"></a> 
+    <h3>quickAddUrl</h3>
+    <p class="padded"><span class="datatype">String</span> &nbsp; Url for quick adding.</p>
+    <a name="config_quickdeleteurl"></a> 
+    <h3>quickDeleteUrl</h3>
+    <p class="padded"><span class="datatype">String</span> &nbsp; Url for removing an event.</p>
+    <a name="config_quickdeleteurl"></a> 
+    <h3>quickDeleteUrl</h3>
+    <p class="padded"><span class="datatype">String</span> &nbsp; Url for removing an event.</p>
+    <a name="config_quickupdateurl"></a> 
+    <h3>quickUpdateUrl</h3>
+    <p class="padded"><span class="datatype">String</span> &nbsp; Url for time span update.</p>
+    <a name="config_showday"></a> 
+    <h3>showday</h3>
+    <p class="padded"><span class="datatype">Date</span> &nbsp; Date of current view.</p>
+    <a name="config_url"></a> 
+    <h3>url</h3>
+    <p class="padded"><span class="datatype">String</span> &nbsp; Url to request calendar data.</p>
+    <a name="config_view"></a> 
+    <h3>view</h3>
+    <p class="padded"><span class="datatype">String</span> &nbsp; Three calendar view provided, 'day','week','month'.</p>
+    <a name="config_weekstartday"></a> 
+    <h3>weekstartday</h3>
+    <p class="padded"><span class="datatype">Number</span> &nbsp; First day of week 0 for Sun, 1 for Mon, 2 for Tue.</p>
+  </div>
+  <a name="method"></a><h2>Method</h2>
+<table class="items-list"><tr><td><a href="index.htm#gotodate">gotoDate</a></td><td><a href="index.htm#nextrange">nextRange</a></td><td><a href="index.htm#previousrange">previousRange</a></td><td><a href="index.htm#reload">reload</a></td><tr><td><a href="index.htm#swtichview">swtichView</a></td></table>  <div class="list">
+    <a name="gotodate"></a> 
+      <h3>gotoDate(date)</h3>
+      <p class="padded"> To go to a range containing date. If view is week, it will go to a week containing date. If view is month, it will got to a month containing date.</p>
+      <p class="padded"><table cellspacing="3" width="90%" class="parameter-table"><tr><td width="10%"><i>Date</i></td><td width="10%"><b>date</b></td><td width="80%">. Date to go.</td></tr></table></p>
+    <a name="nextrange"></a> 
+      <h3>nextRange()</h3>
+      <p class="padded"> To go to next date range. If view is week, it will go to next week. If view is month, it will got to next month.</p>
+      <p class="padded"><table cellspacing="3" width="90%" class="parameter-table"></table></p>
+    <a name="previousrange"></a> 
+      <h3>previousRange()</h3>
+      <p class="padded"> To go to previous date range. If view is week, it will go to previous week. If view is month, it will got to previous month.</p>
+      <p class="padded"><table cellspacing="3" width="90%" class="parameter-table"></table></p>
+    <a name="reload"></a> 
+      <h3>reload()</h3>
+      <p class="padded"> To reload event of current time range.</p>
+      <p class="padded"><table cellspacing="3" width="90%" class="parameter-table"></table></p>
+    <a name="swtichview"></a> 
+      <h3>swtichView(view)</h3>
+      <p class="padded"> To switch to another view.</p>
+      <p class="padded"><table cellspacing="3" width="90%" class="parameter-table"><tr><td width="10%"><i>String</i></td><td width="10%"><b>view</b></td><td width="80%"> View name, one of 'day', 'week', 'month'.</td></tr></table></p>
+  </div>
+  <a name="event"></a><h2>Events</h2>
+<table class="items-list"><tr><td><a href="index.htm#onafterrequestdata">onAfterRequestData</a></td><td><a href="index.htm#onafterrequestdata">onAfterRequestData</a></td><td><a href="index.htm#onbeforerequestdata">onBeforeRequestData</a></td></table>  <div class="list">
+    <a name="onafterrequestdata"></a> 
+      <h3>onAfterRequestData(<i></i>&nbsp stage)</h3>
+      <p class="padded">Fired when some errors occur while any ajax request is finished.</p>
+      <p class="padded"><table cellspacing="3" width="90%" class="parameter-table"><tr><td width="10%"><i>Number</i></td><td width="10%"><b>stage</b></td><td width="80%">. 1 for retrieving events, 2 - adding event, 3 - removiing event, 4 - update event.</td></tr></table></p>
+    <a name="onafterrequestdata"></a> 
+      <h3>onAfterRequestData(<i></i>&nbsp stage)</h3>
+      <p class="padded">Fired before any ajax request is finished.</p>
+      <p class="padded"><table cellspacing="3" width="90%" class="parameter-table"><tr><td width="10%"><i>Number</i></td><td width="10%"><b>stage</b></td><td width="80%">. 1 for retrieving events, 2 - adding event, 3 - removiing event, 4 - update event.</td></tr></table></p>
+    <a name="onbeforerequestdata"></a> 
+      <h3>onBeforeRequestData(<i></i>&nbsp stage)</h3>
+      <p class="padded">Fired before any ajax request is sent.</p>
+      <p class="padded"><table cellspacing="3" width="90%" class="parameter-table"><tr><td width="10%"><i>Number</i></td><td width="10%"><b>stage</b></td><td width="80%">. 1 for retrieving events, 2 - adding event, 3 - removiing event, 4 - update event.</td></tr></table></p>
+  </div>
+</div>
+
+			         
+
+              <div class="page-nav fix"> 
+                <span class="previous-entries">
+                </span> 
+                <span class="next-entries">
+                </span>
+              </div>
+              <!-- page nav -->		
+            </div>				 		
+          </div> 
+          <!-- end leftcol -->		
+          <div style="position: relative; display: block;" class="dbx-group"  id="sidebar">	 		
+            <div id="cred">				
+              <a class="plimage" href="http://www.pagelines.com/">Free WordPress  Themes</a>		
+            </div>	         
+            <!--sidebox start -->             
+            <!--sidebox end --> 	
+            <!--sidebox start -->	 	
+            <!--sidebox end -->       
+            <!--sidebox start -->             
+            <!--sidebox end -->       
+            <!--sidebox start -->             
+            <!--sidebox end -->       
+            <!--sidebox start -->             
+            <!--sidebox end -->   	
+            <div style="clear: both;">
+            </div>
+            
+            
+            
+            <div style="position: relative; display: block;" id="links"  class="dbx-box dbx-box-open dbxid3">        
+              <h3 title="click-down and drag to move this box"  style="position: relative; display: block;" class="dbx-handle  dbx-handle-cursor">API
+                <a title="click to close this box"  class="dbx-toggle dbx-toggle-open" href="javascript:void(null)"  style="cursor: pointer;">&nbsp;</a></h3>        
+                <div class="dbx-content">          
+
+<div class="index">
+<ul>
+<li class="class"><a href="index.htm">wdCalendar</a>
+  <ul>
+    <li class="group"><a href="index.htm#config">Config</a>
+      <ul>
+        <li class="config"><a href="index.htm#config_autoload">autoload</a></li>
+        <li class="config"><a href="index.htm#config_enabledrag">enableDrag</a></li>
+        <li class="config"><a href="index.htm#config_eventitems">eventItems</a></li>
+        <li class="config"><a href="index.htm#config_extparam">extParam</a></li>
+        <li class="config"><a href="index.htm#config_height">height</a></li>
+        <li class="config"><a href="index.htm#config_quickaddurl">quickAddUrl</a></li>
+        <li class="config"><a href="index.htm#config_quickdeleteurl">quickDeleteUrl</a></li>
+        <li class="config"><a href="index.htm#config_quickdeleteurl">quickDeleteUrl</a></li>
+        <li class="config"><a href="index.htm#config_quickupdateurl">quickUpdateUrl</a></li>
+        <li class="config"><a href="index.htm#config_showday">showday</a></li>
+        <li class="config"><a href="index.htm#config_url">url</a></li>
+        <li class="config"><a href="index.htm#config_view">view</a></li>
+        <li class="config"><a href="index.htm#config_weekstartday">weekstartday</a></li>
+      </ul>
+    </li>
+    <li class="group"><a href="index.htm#method">Method</a>
+      <ul>
+        <li class="config"><a href="index.htm#gotodate">gotoDate</a></li>
+        <li class="config"><a href="index.htm#nextrange">nextRange</a></li>
+        <li class="config"><a href="index.htm#previousrange">previousRange</a></li>
+        <li class="config"><a href="index.htm#reload">reload</a></li>
+        <li class="config"><a href="index.htm#swtichview">swtichView</a></li>
+      </ul>
+    </li>
+    <li class="group"><a href="index.htm#event">Event</a>
+      <ul>
+        <li class="config"><a href="index.htm#onafterrequestdata">onAfterRequestData</a></li>
+        <li class="config"><a href="index.htm#onafterrequestdata">onAfterRequestData</a></li>
+        <li class="config"><a href="index.htm#onbeforerequestdata">onBeforeRequestData</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+</ul>
+</div>
+              </div>      
+            </div>
+
+            <span style="display: block; width: 0pt; height: 0pt;  overflow: hidden;" class="dbx-box dbx-dummy dbx-offdummy">
+            </span>
+          </div>
+          <!--/sidebar -->				 		
+        </div> 
+        <!-- /container -->	
+      </div> 
+      <!-- /wrapper -->    
+      <hr class="hidden">  
+    </div>
+    
+  </body>
+</html>
