@@ -1661,7 +1661,11 @@
             var left = offsetMe.left;
 
             var daystr = this.abbr;
-            var day = strtodate(daystr+" 00:00");
+            //***Andres Chabur
+//            var day = strtodate(daystr+" 00:00");
+            var arrdays = daystr.split('/');
+            var day = new Date(arrdays[2], parseInt(arrdays[0] - 1), arrdays[1]);
+            //***
             var cc = $("#cal-month-cc");
             var ccontent = $("#cal-month-cc-content table tbody");
             var ctitle = $("#cal-month-cc-title");
