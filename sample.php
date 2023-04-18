@@ -23,7 +23,7 @@
     
     <script type="text/javascript">
         $(document).ready(function() {     
-           var view="week";          
+           var view="day";          
            
             var DATA_FEED_URL = "php/datafeed.php";
             var op = {
@@ -41,7 +41,9 @@
                 url: DATA_FEED_URL + "?method=list",  
                 quickAddUrl: DATA_FEED_URL + "?method=add", 
                 quickUpdateUrl: DATA_FEED_URL + "?method=update",
-                quickDeleteUrl: DATA_FEED_URL + "?method=remove"        
+                quickDeleteUrl: DATA_FEED_URL + "?method=remove",
+                firstHour: 7,
+                lastHour: 21,
             };
             var $dv = $("#calhead");
             var _MH = document.documentElement.clientHeight;
