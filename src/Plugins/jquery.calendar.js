@@ -512,24 +512,19 @@
       }
       switch (option.view) {
         case "day":
-          // NOTE: Costruisce la View per 1 giorno
           BuildDaysAndWeekView(showday, 1, events, config);
           break;
         case "week":
-          // NOTE: Costruisce la View per la settimana
           BuildDaysAndWeekView(showday, 7, events, config);
           break;
         case "month":
-          // NOTE: Costruisce la view per il mese
           BuildMonthView(showday, events, config);
           break;
         default:
           alert(i18n.xgcalendar.no_implement);
           break;
       }
-      // NOTE: Inizializza gli eventi
       initevents(option.view);
-      // NOTE: Ridimensiona il container a seconda della finestra
       ResizeView();
     }
 
@@ -2589,7 +2584,6 @@
     }
     function initevents(viewtype) {
       if (viewtype == "week" || viewtype == "day") {
-        // NOTE: Evento singolo
         $("div.chip", gridcontainer).each(function (i) {
           var chip = $(this);
           chip.click(dayshow);
@@ -2607,7 +2601,6 @@
             chip.mousedown(returnfalse);
           }
         });
-        // NOTE: Evento tutto il giorno
         $("div.rb-o", gridcontainer).each(function (i) {
           var chip = $(this);
           chip.click(dayshow);
@@ -2622,7 +2615,6 @@
           }
         });
         if (option.readonly == false) {
-          // NOTE: Colonna giornalier
           $("td.tg-col", gridcontainer).each(function (i) {
             $(this).mousedown(function (e) {
               dragStart.call(this, "dw1", e);
@@ -2635,7 +2627,6 @@
           });
         }
 
-        // NOTE: Va dalla settimana al singolo giorno
         if (viewtype == "week") {
           $("#dvwkcontaienr th.gcweekname").each(function (i) {
             $(this).click(weekormonthtoday);
