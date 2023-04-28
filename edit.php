@@ -198,7 +198,7 @@
           <span class="Save"  title="Save the calendar">Save(<u>S</u>)
           </span>          
         </a>                           
-        <?php if($event){ ?>
+        <?php if($event) { ?>
         <a id="Deletebtn" class="imgbtn" href="javascript:void(0);">                    
           <span class="Delete" title="Cancel the calendar">Delete(<u>D</u>)
           </span>                
@@ -212,42 +212,44 @@
       <div style="clear: both">         
       </div>        
       <div class="infocontainer">            
-        <form action="php/datafeed.php?method=adddetails<?php echo $event?"&id=".$event->Id:""; ?>" class="fform" id="fmEdit" method="post">                 
+        <form action="php/datafeed.php?method=adddetails<?php echo $event ? "&id=".$event->Id : ""; ?>" class="fform" id="fmEdit" method="post">                 
           <label>                    
             <span>                        *Subject:              
             </span>                    
             <div id="calendarcolor">
             </div>
-            <input MaxLength="200" class="required safe" id="Subject" name="Subject" style="width:85%;" type="text" value="<?php echo $event?$event->Subject:"" ?>" />                     
-            <input id="colorvalue" name="colorvalue" type="hidden" value="<?php echo $event?$event->Color:"" ?>" />                
+            <input MaxLength="200" class="required safe" id="Subject" name="Subject" style="width:85%;" type="text" value="<?php echo $event ? $event->Subject : "" ?>" />                     
+            <input id="colorvalue" name="colorvalue" type="hidden" value="<?php echo $event ? $event->Color : "" ?>" />                
           </label>                 
           <label>                    
             <span>*Time:
             </span>                    
             <div>  
-              <?php if($event){
+              <?php if($event) {
                   $sarr = explode(" ", php2JsTime(mySql2PhpTime($event->StartTime)));
                   $earr = explode(" ", php2JsTime(mySql2PhpTime($event->EndTime)));
               }?>                    
-              <input MaxLength="10" class="required date" id="stpartdate" name="stpartdate" style="padding-left:2px;width:90px;" type="text" value="<?php echo $event?$sarr[0]:""; ?>" />                       
-              <input MaxLength="5" class="required time" id="stparttime" name="stparttime" style="width:40px;" type="text" value="<?php echo $event?$sarr[1]:""; ?>" />To                       
-              <input MaxLength="10" class="required date" id="etpartdate" name="etpartdate" style="padding-left:2px;width:90px;" type="text" value="<?php echo $event?$earr[0]:""; ?>" />                       
-              <input MaxLength="50" class="required time" id="etparttime" name="etparttime" style="width:40px;" type="text" value="<?php echo $event?$earr[1]:""; ?>" />                                            
+              <input MaxLength="10" class="required date" id="stpartdate" name="stpartdate" style="padding-left:2px;width:90px;" type="text" value="<?php echo $event ? $sarr[0] : ""; ?>" />                       
+              <input MaxLength="5" class="required time" id="stparttime" name="stparttime" style="width:40px;" type="text" value="<?php echo $event ? $sarr[1] : ""; ?>" />To                       
+              <input MaxLength="10" class="required date" id="etpartdate" name="etpartdate" style="padding-left:2px;width:90px;" type="text" value="<?php echo $event ? $earr[0] : ""; ?>" />                       
+              <input MaxLength="50" class="required time" id="etparttime" name="etparttime" style="width:40px;" type="text" value="<?php echo $event ? $earr[1] : ""; ?>" />                                            
               <label class="checkp"> 
-                <input id="IsAllDayEvent" name="IsAllDayEvent" type="checkbox" value="1" <?php if($event&&$event->IsAllDayEvent!=0) {echo "checked";} ?>/>          All Day Event                      
+                <input id="IsAllDayEvent" name="IsAllDayEvent" type="checkbox" value="1" <?php if($event&&$event->IsAllDayEvent!=0) {
+                    echo "checked";
+                } ?>/>          All Day Event                      
               </label>                    
             </div>                
           </label>                 
           <label>                    
             <span>                        Location:
             </span>                    
-            <input MaxLength="200" id="Location" name="Location" style="width:95%;" type="text" value="<?php echo $event?$event->Location:""; ?>" />                 
+            <input MaxLength="200" id="Location" name="Location" style="width:95%;" type="text" value="<?php echo $event ? $event->Location : ""; ?>" />                 
           </label>                 
           <label>                    
             <span>                        Remark:
             </span>                    
 <textarea cols="20" id="Description" name="Description" rows="2" style="width:95%; height:70px">
-<?php echo $event?$event->Description:""; ?>
+<?php echo $event ? $event->Description : ""; ?>
 </textarea>                
           </label>                
           <input id="timezone" name="timezone" type="hidden" value="" />           
