@@ -849,7 +849,7 @@
             '<td class="st-c st-s"',
             " ch='qkadd' abbr='",
             dateFormat.call(dayarrs[i].date, "yyyy-M-d"),
-            "' axis='00:00'>&nbsp;</td>"
+            `' axis='${option.firstHour}'>&nbsp;</td>`
           );
         }
         ht.push("</tr>");
@@ -887,7 +887,7 @@
                   dayarrs[h].date,
                   i18n.xgcalendar.dateformat.fulldayvalue
                 ),
-                "' axis='00:00'>&nbsp;"
+                `' axis='${option.firstHour}'>&nbsp;`
               );
               h++;
             }
@@ -903,7 +903,7 @@
               dayarrs[h].date,
               i18n.xgcalendar.dateformat.fulldayvalue
             ),
-            "' axis='00:00'>&nbsp;</td>"
+            `' axis='${option.firstHour}'>&nbsp;</td>`
           );
         }
         ht.push("</tr>");
@@ -1228,7 +1228,7 @@
           htb.push(
             "<td abbr='",
             dateFormat.call(day, i18n.xgcalendar.dateformat.fulldayvalue),
-            "' ch='qkadd' axis='00:00' title=''"
+            `' ch='qkadd' axis='${option.firstHour}' title=''`
           );
 
           if (
@@ -1252,7 +1252,7 @@
         //title tr
         htb.push("<tr>");
         var titletemp =
-          "<td class=\"st-dtitle${titleClass}\" ch='qkadd' abbr='${abbr}' axis='00:00' title=\"${title}\"><span class='monthdayshow'>${dayshow}</span></a></td>";
+          "<td class=\"st-dtitle${titleClass}\" ch='qkadd' abbr='${abbr}' axis='"+option.firstHour+"' title=\"${title}\"><span class='monthdayshow'>${dayshow}</span></a></td>";
 
         for (var i = 0; i < 7; i++) {
           var o = { titleClass: "", dayshow: "" };
@@ -1482,7 +1482,7 @@
               $.extend(tempdata, {
                 html: "&nbsp;",
                 ch: "qkadd",
-                axis: "00:00",
+                axis: `${option.firstHour}`,
                 abbr: dateFormat.call(
                   cday[h],
                   i18n.xgcalendar.dateformat.fulldayvalue
@@ -1735,7 +1735,7 @@
     function weekormonthtoday(e) {
       var th = $(this);
       var daystr = th.attr("abbr");
-      option.showday = strtodate(daystr + " 00:00");
+      option.showday = strtodate(daystr + ` ${option.firstHour}`);
       option.view = "day";
       render();
       if (option.onweekormonthtoday) {
@@ -2165,7 +2165,7 @@
       var left = offsetMe.left;
 
       var daystr = this.abbr;
-      var day = strtodate(daystr + " 00:00");
+      var day = strtodate(daystr + ` ${option.firstHour}`);
       var cc = $("#cal-month-cc");
       var ccontent = $("#cal-month-cc-content table tbody");
       var ctitle = $("#cal-month-cc-title");
