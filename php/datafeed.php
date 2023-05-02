@@ -1,4 +1,5 @@
 <?php
+
 include_once("dbconfig.php");
 include_once("functions.php");
 
@@ -128,13 +129,28 @@ switch ($method) {
         $st = $_POST["stpartdate"] . " " . $_POST["stparttime"];
         $et = $_POST["etpartdate"] . " " . $_POST["etparttime"];
         if($id) {
-            $ret = updateDetailedCalendar($id, $st, $et,
-                $_POST["Subject"], $_POST["IsAllDayEvent"] ? 1 : 0, $_POST["Description"],
-                $_POST["Location"], $_POST["colorvalue"], $_POST["timezone"]);
+            $ret = updateDetailedCalendar(
+                $id,
+                $st,
+                $et,
+                $_POST["Subject"],
+                $_POST["IsAllDayEvent"] ? 1 : 0,
+                $_POST["Description"],
+                $_POST["Location"],
+                $_POST["colorvalue"],
+                $_POST["timezone"]
+            );
         } else {
-            $ret = addDetailedCalendar($st, $et,
-                $_POST["Subject"], $_POST["IsAllDayEvent"] ? 1 : 0, $_POST["Description"],
-                $_POST["Location"], $_POST["colorvalue"], $_POST["timezone"]);
+            $ret = addDetailedCalendar(
+                $st,
+                $et,
+                $_POST["Subject"],
+                $_POST["IsAllDayEvent"] ? 1 : 0,
+                $_POST["Description"],
+                $_POST["Location"],
+                $_POST["colorvalue"],
+                $_POST["timezone"]
+            );
         }
         break;
 
